@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOC_ACTOR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            background-image: url('i_background.jpg'); /* Default background image */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #007bff;
+            flex-shrink: 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+        .navbar .project-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 50px 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .sub-options {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .option:hover .sub-options {
+            display: block;
+        }
+        .sub-option a {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: #333;
+        }
+        .sub-option a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        footer {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            padding: 10px 0;
+            background-color: #f8f9fa;
+            flex-shrink: 0;
+            margin-top: auto;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .about,
+        .contact {
+            text-align: left;
+            margin-bottom: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="showContact()">Contact Us</a>
+        <span class="project-name" onclick="showAbout()">DOC_ACTOR</span>
+        <div class="option">
+            <a href="#">Patient</a>
+            <div class="sub-options">
+                <div class="sub-option">
+                    <a href="p_signin.html">Sign In</a>
+                </div>
+                <div class="sub-option">
+                    <a href="p_signup.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="option">
+            <a href="#">Doctor</a>
+            <div class="sub-options">
+                <div class="sub-option">
+                    <a href="d_signin.html">Sign In</a>
+                </div>
+                <div class="sub-option">
+                    <a href="d_signup.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="about" id="about">
+            <p><b>DOC_ACTOR</b> is a telemedicine platform connecting patients with doctors online. It aims to provide convenient healthcare access to individuals, allowing them to consult with medical professionals remotely. Our platform offers a range of features for both patients and doctors, ensuring seamless communication and efficient healthcare delivery.</p>
+        </div>
+        <div class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                <a href="mailto:210701133@gmail.com">210701133@gmail.com</a>, 
+                <a href="mailto:21070115@gmail.com">21070115@gmail.com</a>, 
+                <a href="mailto:210701160@gmail.com">210701160@gmail.com</a>
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 DOC_ACTOR. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showAbout() {
+            document.getElementById('about').style.display = 'block';
+            document.getElementById('contact').style.display = 'none';
+        }
+
+        function showContact() {
+            document.getElementById('contact').style.display = 'block';
+            document.getElementById('about').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
